@@ -13,7 +13,5 @@ class User(AbstractUser):
     ]
     type = models.CharField(max_length=5, choices=TYPE_CHOICES, default="USER")
 
-    USERNAME_FIELD = 'email'
-
     def __str__(self):
         return self.email
