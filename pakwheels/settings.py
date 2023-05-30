@@ -10,9 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
-from pathlib import Path
-
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+from pathlib import Path# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -77,11 +75,11 @@ WSGI_APPLICATION = 'pakwheels.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':  os.environ["DB_NAME"],
-        'USER': os.environ["DB_USER"],
-        'PASSWORD': os.environ["DB_PASSWORD"],
-        'HOST': os.environ["HOST"],
-        'PORT': os.environ["DB_PORT"],
+        'NAME':  os.environ.get("DB_NAME"),
+        'USER': 'postgres',
+        'PASSWORD': '123',
+        'HOST': os.environ.get("HOST"),
+        'PORT': os.environ.get("DB_PORT"),
     }
 }
 
